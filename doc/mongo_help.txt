@@ -1,0 +1,20 @@
+## MongoDB Help ##
+
+# Start mongdb service: sudo service mongod start
+
+# Stop mongdb service: sudo service mongod stop
+
+# Init mongo session: mongo --host 127.0.0.1:27017
+
+# Conf file loc: /etc/mongod.conf
+
+
+## How to change DB Loc:
+(in conf file):
+Change this:
+dbpath=/var/lib/mongo
+
+With:
+dbpath=/home/myuser/data/mongo
+
+cp -ra /var/lib/mongo  /home/myuser/data/mongo
