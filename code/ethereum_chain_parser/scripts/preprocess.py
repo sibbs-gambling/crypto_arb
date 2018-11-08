@@ -12,7 +12,7 @@ import subprocess
 import time
 LOGDIR = "./../Preprocessing/logs"
 
-
+#hello
 subprocess.call([
     "(geth --rpc --rpcport 8545 > {}/geth.log 2>&1) &".format(LOGDIR),
     "(mongod --dbpath mongo/data --port 27017 > {}/mongo.log 2>&1) &".format(LOGDIR)
