@@ -1,0 +1,5 @@
+# GIT IGNORE
+
+*.log
+cred/
+code/mongo/
