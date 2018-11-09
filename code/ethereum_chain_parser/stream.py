@@ -1,12 +1,12 @@
 """Stream updates to the blockchain from geth to mongo."""
 import sys
 import os
-sys.path.append("Preprocessing/Crawler")
+sys.path.append("preprocessing/crawler")
 from Crawler import Crawler
-sys.path.append("Analysis")
+sys.path.append("analysis")
 from TxnGraph import TxnGraph
 from ParsedBlocks import ParsedBlocks
-sys.path.append("Scripts")
+sys.path.append("scripts")
 from extract import syncCSV
 import tqdm
 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     t = None
 
     # Global vars
-    CSVFILE = "Scripts/blockchain.csv"
+    CSVFILE = "scripts/blockchain.csv"
     STEP = 1000
 
     # Sync with the CSV file

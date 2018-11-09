@@ -11,6 +11,8 @@ import time
 import tqdm
 sys.path.append(os.path.realpath(os.path.dirname(__file__)))
 
+os.environ['BLOCKCHAIN_MONGO_DATA_DIR'] = '/var/lib/mongodb/'  # new
+
 DIR = os.environ['BLOCKCHAIN_MONGO_DATA_DIR']
 LOGFIL = "crawler.log"
 if "BLOCKCHAIN_ANALYSIS_LOGS" in os.environ:

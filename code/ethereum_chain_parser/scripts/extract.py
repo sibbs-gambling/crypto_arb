@@ -2,9 +2,9 @@
 Parse a bunch of snapshots of the blockchain and dump contents into a CSV file.
 """
 import sys
-sys.path.append("./../Analysis")
+sys.path.append("./../analysis")
 import os
-os.environ['ETH_BLOCKCHAIN_ANALYSIS_DIR'] = './../Analysis/'
+os.environ['ETH_BLOCKCHAIN_ANALYSIS_DIR'] = './../analysis/'
 from ParsedBlocks import ParsedBlocks
 from TxnGraph import TxnGraph
 import tqdm
