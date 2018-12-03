@@ -104,7 +104,7 @@ class Crawler(object):
         data = self._rpcRequest("eth_getBlockByNumber", [hex(n), True], "result")
         block = crawler_util.decodeBlock(data)
         return block
-
+        
     def highestBlockEth(self):
         """Find the highest numbered block in geth."""
         num_hex = self._rpcRequest("eth_blockNumber", [], "result")

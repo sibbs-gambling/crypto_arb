@@ -1,0 +1,17 @@
+Resources:
+(Provides useful Geth commands from the Geth folder in the C:\ drive) https://ethereum.stackexchange.com/questions/3229/geth-what-happened-to-logfile
+
+Medium documentation on syncing an Ethereum node using geth and our local machines – provided instructions for creating an EthereumTestnet folder in the C:\ then directing the testnet download to go there 
+https://medium.freecodecamp.org/how-to-sync-an-ethereum-node-using-geth-and-ethereum-wallet-81423d42a583
+
+
+
+
+Installation Instructions:
+
+(LINUX) command I used to download: geth --syncmode fast --cache=2048 –rpc
+(WINDOWS) https://geth.ethereum.org/downloads/
+
+Created password using Random Password Generator
+Stored Password on Local Computer
+GETH returned an address for our geth account which we saved on our respective computers

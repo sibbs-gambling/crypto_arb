@@ -91,6 +91,8 @@ class ParsedBlocks(object):
             "p2p_txn_count": 0,
             "peer_txns_w_data": 0,
             "num_addr": 0,
+            "num_addr_to": 0,
+            "num_addr_from": 0,
             "total_supply": 7200990.5 + 5.0*self.end_block,
             "priceUSD": self._getPrice(self.start_timestamp, self.end_timestamp)
             }
@@ -171,11 +173,17 @@ class ParsedBlocks(object):
         # All of the addresses encountered
         address_dump = list()
 
+        # All addresses in and out
+        address_dump_to = list()
+        address_dump_from = list()
+
         for e in self.txn_graph.graph.edges():
             to_addr = address_prop[e.target()]
             from_addr = address_prop[e.source()]
             address_dump.append(to_addr)
             address_dump.append(from_addr)
+            address_dump_to.append(to_addr)
+            address_dump_from.append(from_addr)
 
             amount = eWeights[e]
             # The edgeWeight of this edge is the amount of the transaction
@@ -208,6 +216,10 @@ class ParsedBlocks(object):
         # Record all unique addresses up to this point
         addr_set = set(address_dump)
         self.data["num_addr"] = len(addr_set)
+        addr_set_to = set(address_dump_to)
+        self.data["num_addr_to"] = len(addr_set_to)
+        addr_set_from = set(address_dump_from)
+        self.data["num_addr_from"] = len(addr_set_from)
 
     def saveData(self):
         """Save the data to a line in the CSV file."""

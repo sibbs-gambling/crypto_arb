@@ -1,5 +1,13 @@
 # GIT IGNORE
 
-*.log
+# Directories
 cred/
 code/mongo/
+
+# Data Files
+*.csv
+*.p
+
+# Misc
+*.log
+*.pyc

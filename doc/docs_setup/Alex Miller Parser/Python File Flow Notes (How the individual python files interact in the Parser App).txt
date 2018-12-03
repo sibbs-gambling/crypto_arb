@@ -1,0 +1,15 @@
+Preprocess.py // the file that takes the raw blockchain data from GETH. It 
+creates the mongo database as well as the contract map, which maps between
+contracts and blocks
+
+TxnGraph.py // this takes the mongo database and creates a "snapshot" which
+is/contains a graph. From that you can "draw" transaction graphs and run
+something called extract.py (see below)
+
+extract.py // converts transaction graph object to .csv flat file. It uses
+parsedblocks.py.
+
+parsedblocks.py //converts the graph object to csv and is called by extract.py.
+Here is where all the data fields/variables are created (i.e. sum of all
+transaction ammounts, # of transactions, # of addresses in/out, # of P2P, mean
+and standard deviation across addresses
