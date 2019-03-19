@@ -6,7 +6,7 @@ def set_env():
     """Set the analysis environment directory."""
     env = {
             "mongo": ".",      # Where the mongo data is stored
-            "txn_data": "~/data"    # Where the TxnGraphs are stored
+            "txn_data": "/home/justin/data"    # Where the TxnGraphs are stored
         }
     if 'BLOCKCHAIN_MONGO_DATA_DIR' in os.environ:
         env["mongo"] = os.environ['BLOCKCHAIN_MONGO_DATA_DIR']

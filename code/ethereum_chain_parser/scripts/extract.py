@@ -39,7 +39,7 @@ if __name__ == "__main__":
     for i in tqdm.tqdm(range(max_block//resolution)):
 
         if t.end_block > prev_max_block:
-            blocks = ParsedBlocks(t)
+            blocks = ParsedBlocks(t, csv_file=CSVFILE)
             t.extend(STEP)
         else:
             t.end_block += STEP
