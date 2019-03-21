@@ -1,6 +1,7 @@
 """
 Parse a bunch of snapshots of the blockchain and dump contents into a CSV file.
 """
+
 import sys
 sys.path.append("./../analysis")
 import os
