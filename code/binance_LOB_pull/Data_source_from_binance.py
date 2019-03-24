@@ -8,7 +8,7 @@ from binance.client import Client
 import pandas as pd
 
 # Parameters
-Time = 60 * 5 # Time is gven in seconds
+Time = 60 * 20 # Time is gven in seconds
 nLevels = 10
 out_filename = '../cnn_lob/data/' + 'test_lob.csv'
 
